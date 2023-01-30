@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SignInController">
+   <children>
+      <HBox prefHeight="400.0" prefWidth="271.0" styleClass="bg_imgcows" stylesheets="@../application/application.css">
+         <children>
+            <ImageView fitHeight="337.0" fitWidth="271.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/project%20img/HM_Dairy-removebg-preview.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <VBox layoutX="267.0" prefHeight="400.0" prefWidth="333.0">
+         <children>
+            <Label prefHeight="0.0" prefWidth="73.0" styleClass="color_signIn" stylesheets="@../application/application.css" text="Sign In" textFill="#8e9b81">
+               <VBox.margin>
+                  <Insets left="40.0" top="30.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="31.0" prefWidth="253.0" stylesheets="@../application/application.css">
+               <children>
+                  <Pane prefHeight="31.0" prefWidth="35.0">
+                     <children>
+                        <ImageView fitHeight="18.0" fitWidth="18.0" layoutX="11.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/project%20img/user.png" />
+                           </image>
+                        </ImageView>
+                     </children></Pane>
+                  <TextField fx:id="txt_username" prefHeight="31.0" prefWidth="226.0" promptText="Username" styleClass="transparant" stylesheets="@../application/application.css">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin></TextField>
+               </children>
+               <VBox.margin>
+                  <Insets left="30.0" right="50.0" top="60.0" />
+               </VBox.margin>
+               <styleClass>
+                  <String fx:value="bg_txtfield" />
+                  <String fx:value="border" />
+               </styleClass></HBox>
+            <HBox layoutX="10.0" layoutY="90.0" prefHeight="31.0" prefWidth="253.0" stylesheets="@../application/application.css">
+               <children>
+                  <Pane prefHeight="38.0" prefWidth="38.0">
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="18.0" layoutX="11.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/project%20img/lock.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <PasswordField fx:id="txt_pass" onAction="#IsPasswordCorrect" prefHeight="31.0" prefWidth="206.0" promptText="Password" styleClass="bg_txtfield" stylesheets="@../application/application.css" />
+               </children>
+               <VBox.margin>
+                  <Insets left="30.0" right="50.0" top="30.0" />
+               </VBox.margin>
+               <styleClass>
+                  <String fx:value="bg_txtfield" />
+                  <String fx:value="border" />
+               </styleClass>
+            </HBox>
+            <Button fx:id="SignIn" mnemonicParsing="false" onAction="#openHome" prefHeight="0.0" prefWidth="134.0" stylesheets="@../application/application.css" text="Sign In" textFill="WHITE">
+               <VBox.margin>
+                  <Insets left="90.0" top="30.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="bg_imgcows" />
+                  <String fx:value="border" />
+               </styleClass>
+            </Button>
+            <HBox prefHeight="34.0" prefWidth="333.0">
+               <children>
+                  <Label prefHeight="11.0" prefWidth="98.0" text="Not a member?">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="90.0" top="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Hyperlink fx:id="btn_signUp" onAction="#open_SignUp" text="Sign Up">
+                     <HBox.margin>
+                        <Insets top="30.0" />
+                     </HBox.margin></Hyperlink>
+               </children>
+            </HBox>
+            <HBox prefHeight="71.0" prefWidth="333.0">
+               <children>
+                  <Label fx:id="loginSuccess" alignment="CENTER" prefHeight="27.0" prefWidth="243.0">
+                     <HBox.margin>
+                        <Insets left="70.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

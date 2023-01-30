@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CowsController">
+   <children>     
+      <AnchorPane layoutX="4.0" layoutY="1.0" prefHeight="600.0" prefWidth="600.0">
+         <children>
+            <GridPane layoutX="81.0" layoutY="64.0" prefHeight="216.0" prefWidth="473.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <VBox prefHeight="52.0" prefWidth="181.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Cow Id" wrappingWidth="57.0">
+                           <font>
+                              <Font name="Dosis Medium" size="16.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="23.0" />
+                           </VBox.margin>
+                        </Text>
+                        <TextField fx:id="txt_cows" prefHeight="25.0" prefWidth="132.0" styleClass="text-filed" stylesheets="@../application/application.css">
+                           <VBox.margin>
+                              <Insets left="20.0" right="20.0" />
+                           </VBox.margin>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="52.0" prefWidth="181.0" GridPane.columnIndex="1">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Color" wrappingWidth="50.0">
+                           <font>
+                              <Font name="Dosis Medium" size="16.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="23.0" />
+                           </VBox.margin>
+                        </Text>
+                        <TextField fx:id="txt_color" prefHeight="19.0" prefWidth="159.0" styleClass="text-filed" stylesheets="@../application/application.css">
+                           <VBox.margin>
+                              <Insets left="20.0" right="20.0" />
+                           </VBox.margin>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="91.0" prefWidth="140.0" GridPane.columnIndex="2">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Age" wrappingWidth="50.0">
+                           <font>
+                              <Font name="Dosis Medium" size="16.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="23.0" />
+                           </VBox.margin>
+                        </Text>
+                        <TextField fx:id="txt_age" prefHeight="19.0" prefWidth="159.0" styleClass="text-filed" stylesheets="@../application/application.css">
+                           <VBox.margin>
+                              <Insets left="20.0" right="40.0" />
+                           </VBox.margin>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="52.0" prefWidth="181.0" GridPane.rowIndex="1">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Date" wrappingWidth="51.0">
+                           <font>
+                              <Font name="Dosis Medium" size="16.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="23.0" />
+                           </VBox.margin>
+                        </Text>
+                        <DatePicker fx:id="txt_date" styleClass="text-filed-date" stylesheets="@../application/application.css">
+                           <VBox.margin>
+                              <Insets left="15.0" right="15.0" />
+                           </VBox.margin>
+                        </DatePicker>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="52.0" prefWidth="181.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Weight At birth" wrappingWidth="128.0">
+                           <font>
+                              <Font name="Dosis Medium" size="16.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="10.0" />
+                           </VBox.margin>
+                        </Text>
+                        <TextField fx:id="txt_weight" prefHeight="19.0" prefWidth="159.0" styleClass="text-filed" stylesheets="@../application/application.css">
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </VBox.margin>
+                        </TextField>
+                     </children>
+                  </VBox>
+               </children>
+            </GridPane>
+            <HBox layoutX="86.0" layoutY="269.0" prefHeight="31.0" prefWidth="437.0">
+               <children>
+                  <Button fx:id="btn_save" mnemonicParsing="false" onMouseClicked="#saveCows" prefHeight="31.0" prefWidth="74.0" styleClass="btn_SignIn" stylesheets="@../application/application.css" text="S a v e" textFill="WHITE">
+                     <font>
+                        <Font name="Dosis Regular" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="50.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="btn_edite" mnemonicParsing="false" onMouseClicked="#editeCows" prefHeight="31.0" prefWidth="74.0" styleClass="btn_SignIn" stylesheets="@../application/application.css" text="E d i t" textFill="WHITE">
+                     <font>
+                        <Font name="Dosis Regular" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="50.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="btn_delete" mnemonicParsing="false" onMouseClicked="#deleteCows" prefHeight="31.0" prefWidth="81.0" styleClass="btn_SignIn" stylesheets="@../application/application.css" text="D e l e t e" textFill="WHITE">
+                     <font>
+                        <Font name="Dosis Regular" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="50.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="btn_clear" mnemonicParsing="false" onMouseClicked="#clearCows" prefHeight="31.0" prefWidth="74.0" styleClass="btn_SignIn" stylesheets="@../application/application.css" text="C l e a r" textFill="WHITE">
+                     <font>
+                        <Font name="Dosis Regular" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <Text layoutX="226.0" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cow Report" textAlignment="CENTER" wrappingWidth="118.0">
+               <font>
+                  <Font name="Dosis Medium" size="22.0" />
+               </font>
+            </Text>
+            <TableView fx:id="table_cows" layoutX="59.0" layoutY="366.0" onMouseClicked="#getSelected" prefHeight="216.0" prefWidth="483.0" styleClass="tableview" stylesheets="@../application/application.css">
+              <columns>
+                <TableColumn fx:id="cln_id" prefWidth="81.0" text="Cow Id" />
+                <TableColumn fx:id="cln_color" prefWidth="107.0" text="Color" />
+                  <TableColumn fx:id="cln_date" prefWidth="113.0" text="Date" />
+                  <TableColumn fx:id="cln_age" prefWidth="68.0" text="Age" />
+                  <TableColumn fx:id="cln_weight" prefWidth="122.0" text="Weight At birth" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

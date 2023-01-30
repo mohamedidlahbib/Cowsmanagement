@@ -1,1 +1,7 @@
-# Cowsmanagement
+Groupe 18
+
+- HAMID ELAALY
+- HAMZA AOUNI
+- MOHAMED ID LAHBIB
+- ASSIA MOUSTAGHFIR
+
